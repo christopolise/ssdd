@@ -33,8 +33,7 @@ $ gcc -o ssdd *.c -lncurses && ./ssdd
 
 Game Instructions
 -----------------
-**Pong**
-
+**Pong**<br>
 To play `pong` use the `w` and `s` to manuever the paddle up and down respectively.
 
 **Snake**<br>
