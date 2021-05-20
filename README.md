@@ -26,10 +26,17 @@ If `ncurses` is installed, several packages will be displayed as the output. If 
 ```bash
 $ sudo apt install libncurses5 libncurses5-dev
 ```
-The package can then be compiled and run with:
+The package can then be compiled and run with. The program reads from `/dev/input/event<x>` which requires elevated privileges which will require `sudo`:
 ```bash
-$ gcc -o ssdd *.c -lncurses && ./ssdd
+$ gcc -o ssdd *.c -lncurses && sudo ./ssdd
 ```
+
+The default device being read from is `/dev/input/event3`. If the controls do not work, it is probably due your keyboard being under a different `event` file. To see which `event` file your keyboard is under, you can run:
+
+```bash
+$ cat /proc/bus/input/devices | grep -A 5 Keyboard | grep event
+``` 
+The lowest event value will most likely be your keyboard. To replace the default value, you can change the `INPUT_EVENT` found in `pong.h`. After changing it, remember to recompile.
 
 Game Instructions
 -----------------
