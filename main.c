@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "pong.h"
 
 int main(int argc, char * argv[])
@@ -5,7 +6,8 @@ int main(int argc, char * argv[])
     
     initPongScreen();
     pong();
-    // endwin();
+
+    printf("BANANA\n");
 
     return 0;
 }

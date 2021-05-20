@@ -26,6 +26,32 @@ void drawScore(int score, bool isPlayer, digit screen[18][48])
     }
 }
 
+void moveCompPaddle()
+{
+    if(curX > 24)
+    {
+        if(curY < compPaddle[1])
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                compPaddle[i]--;
+            }
+            drawPixel(46, compPaddle[0], banana, true);
+            drawPixel(46, compPaddle[5] + 1, banana, false);
+        }
+
+        if(curY > compPaddle[4])
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                compPaddle[i]++;
+            }
+            drawPixel(46, compPaddle[0] - 1, banana, false);
+            drawPixel(46, compPaddle[5], banana, true);
+        }
+    }
+}
+
 void moveBall()
 {
     lastX = curX;
@@ -161,7 +187,7 @@ int pong()
           bytes = read(fd, &data, sizeof(data));
         //   if(bytes > 0)
         //   {
-        //     //   printf("Keypress value=%x, type=%x, code=%x\n", data.value, data.type, data.code);
+        //       printf("Keypress value=%x, type=%x, code=%x\n", data.value, data.type, data.code);
         //   }
 
         // Draw paddle
@@ -199,6 +225,13 @@ int pong()
                 drawPixel(1, paddle[0] - 1, banana, false);
                 drawPixel(1, paddle[5], banana, true);
             }
+        }
+
+        paddleCounter++;
+        if(paddleCounter == PADDLE_COUNTER_LIMIT)
+        {
+            paddleCounter = 0;
+            moveCompPaddle();
         }
 
         // Draw Scores
@@ -239,6 +272,8 @@ int pong()
         updateScreen(banana);
         // usleep(5000);
     }
+
+    close(fd);
 
     return endwin();
 }
