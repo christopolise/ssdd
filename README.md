@@ -43,6 +43,7 @@ The lowest event value will most likely be your keyboard. To replace the default
 Game Instructions
 -----------------
 **Pong**<br>
+![banana](assets/pong.png)
 To play `pong` use the `w` and `s` to manuever the paddle up and down respectively.
 
 **Snake**<br>
