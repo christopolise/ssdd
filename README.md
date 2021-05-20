@@ -37,6 +37,6 @@ Game Instructions
 
 To play `pong` use the `w` and `s` to manuever the paddle up and down respectively.
 
-**Snake**
+**Snake**<br>
 _Coming Soon_
 
