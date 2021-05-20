@@ -179,6 +179,173 @@ digit drawNum(int num)
             val.f = true;
             val.g = true;
             break;
+        case 'a':
+            val.a = true;
+            val.b = true;
+            val.c = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'b':
+            val.c = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'c':
+            val.a = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            break;
+        case 'd':
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            val.e = true;
+            val.g = true;
+            break;
+        case 'e':
+            val.a = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'f':
+            val.a = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'g':
+            val.a = true;
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'h':
+            val.b = true;
+            val.c = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'i':
+            val.b = true;
+            val.c = true;
+            break;
+        case 'j':
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            break;
+        case 'k':
+            val.a = true;
+            val.c = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'l':
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            break;
+        case 'm':
+            val.a = true;
+            val.c = true;
+            val.e = true;
+            break;
+        case 'n':
+            val.a = true;
+            val.b = true;
+            val.c = true;
+            val.e = true;
+            val.f = true;
+            break;
+        case 'o':
+            val.c = true;
+            val.d = true;
+            val.e = true;
+            val.g = true;
+            break;
+        case 'p':
+            val.a = true;
+            val.b = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'q':
+            val.a = true;
+            val.b = true;
+            val.c = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'r':
+            val.a = true;
+            val.e = true;
+            val.f = true;
+            break;
+        case 's':
+            val.a = true;
+            val.c = true;
+            val.d = true;
+            val.g = true;
+            break;
+        case 't':
+            val.b = true;
+            val.c = true;
+            val.g = true;
+            break;
+        case 'u':
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            break;
+        case 'v':
+            val.b = true;
+            val.d = true;
+            val.f = true;
+            break;
+        case 'w':
+            val.a = true;
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'x':
+            val.b = true;
+            val.d = true;
+            val.e = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'y':
+            val.b = true;
+            val.c = true;
+            val.d = true;
+            val.f = true;
+            val.g = true;
+            break;
+        case 'z':
+            val.a = true;
+            val.d = true;
+            val.e = true;
+            val.g = true;
+            break;
+                    
     }
 
     return val;
