@@ -14,7 +14,8 @@ For the hardware build, visit [this link](https://www.instructables.com/7-Segmen
 |pong|Classic arcade game that illustrates functionality of the display|
 |_snake (coming soon)_|Classic arcade game that involves a two-dimensional snake and a lot of skill| 
 
-###Compile/Run
+Compile/Run
+-----------
 
 `ssdd` depends upon the `ncurses.h` library. If using Ubuntu 20.04 (or any other recent Debian-based distro), you can check to
 
@@ -30,7 +31,8 @@ The package can then be compiled and run with:
 $ gcc -o ssdd *.c -lncurses && ./ssdd
 ```
 
-###Game Instructions
+Game Instructions
+-----------------
 #####Pong
 To play `pong` use the `w` and `s` to manuever the paddle up and down respectively.
 
