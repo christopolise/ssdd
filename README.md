@@ -2,7 +2,8 @@
 
 _This project is an emulator for the firmware that will run on the Seven Segment Display Display. The SSDD is a grid of 48X18 seven segment digits. The emulator uses ncurses to simulate the display and all of the software on it._
 
-###Components
+Components
+----------
 
 For the hardware build, visit [this link](https://www.instructables.com/7-Segment-Display-Array/) which has detailed instructions, Arduino sketches, and Gerber files to quickly fab the project.
 
