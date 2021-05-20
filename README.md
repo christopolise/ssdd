@@ -31,6 +31,8 @@ The package can then be compiled and run with. The program reads from `/dev/inpu
 $ gcc -o ssdd *.c -lncurses && sudo ./ssdd
 ```
 
+Troubleshooting/Tips
+--------------------
 The default device being read from is `/dev/input/event3`. If the controls do not work, it is probably due your keyboard being under a different `event` file. To see which `event` file your keyboard is under, you can run:
 
 ```bash
