@@ -14,7 +14,7 @@ void initScreen()
 void updateScreen(digit screen[18][48])
 {
 
-    clear();
+    // clear();
 
     char screenbuff[10410];
 
