@@ -1,4 +1,3 @@
-#include <ncurses.h>
 #include <stdio.h>
 
 #include "pong.h"
@@ -36,8 +35,8 @@ void moveCompPaddle()
             {
                 compPaddle[i]--;
             }
-            drawPixel(46, compPaddle[0], banana, true);
-            drawPixel(46, compPaddle[5] + 1, banana, false);
+            drawPixel(46, compPaddle[0], banana, ON);
+            drawPixel(46, compPaddle[5] + 1, banana, OFF);
         }
 
         if(curY > compPaddle[4])
@@ -46,8 +45,8 @@ void moveCompPaddle()
             {
                 compPaddle[i]++;
             }
-            drawPixel(46, compPaddle[0] - 1, banana, false);
-            drawPixel(46, compPaddle[5], banana, true);
+            drawPixel(46, compPaddle[0] - 1, banana, OFF);
+            drawPixel(46, compPaddle[5], banana, ON);
         }
     }
 }
@@ -193,13 +192,13 @@ int pong()
         // Draw paddle
         for(int i = 0; i < 6; i++)
         {
-            drawPixel(1, paddle[i], banana, true);
+            drawPixel(1, paddle[i], banana, ON);
         }
 
         // Draw compPaddle
         for(int i = 0; i < 6; i++)
         {
-            drawPixel(46, compPaddle[i], banana, true);
+            drawPixel(46, compPaddle[i], banana, ON);
         }
 
         if(data.value == W_KEY_VAL)
@@ -210,8 +209,8 @@ int pong()
                 {
                     paddle[i]--;
                 }
-                drawPixel(1, paddle[0], banana, true);
-                drawPixel(1, paddle[5] + 1, banana, false);
+                drawPixel(1, paddle[0], banana, ON);
+                drawPixel(1, paddle[5] + 1, banana, OFF);
             }
         }
         else if(data.value == S_KEY_VAL)
@@ -222,8 +221,8 @@ int pong()
                 {
                     paddle[i]++;
                 }
-                drawPixel(1, paddle[0] - 1, banana, false);
-                drawPixel(1, paddle[5], banana, true);
+                drawPixel(1, paddle[0] - 1, banana, OFF);
+                drawPixel(1, paddle[5], banana, ON);
             }
         }
 
@@ -244,8 +243,8 @@ int pong()
         {
             counter = 0;
             moveBall();
-            drawPixel(lastX , lastY, banana, false);
-            drawPixel(curX , curY, banana, true);
+            drawPixel(lastX , lastY, banana, OFF);
+            drawPixel(curX , curY, banana, ON);
         }
 
         // Draw Player Line

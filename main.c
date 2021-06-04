@@ -5,11 +5,11 @@
 int main(int argc, char * argv[])
 {
     
-    // initPongScreen();
-    // pong();
+    initPongScreen();
+    pong();
 
-    initSnakeScreen();
-    snake();
+    // initSnakeScreen();
+    // snake();
 
     printf("BANANA\n");
 

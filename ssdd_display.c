@@ -6,16 +6,18 @@
 
 void initScreen() 
 {
+    #if (PLAY_MODE == COMPUTER)
     initscr();
     noecho();
     curs_set(FALSE);
+    #else
+    sevseg = LedControl(D7, D5, D8, 108);
+    #endif
 }
 
 void updateScreen(digit screen[18][48])
 {
-
-    // clear();
-
+    #if(PLAY_MODE == COMPUTER)
     char screenbuff[10410];
 
     screenbuff[0] = '\0';
@@ -66,6 +68,11 @@ void updateScreen(digit screen[18][48])
 
     mvprintw(0,0, screenbuff);
     refresh();
+    #else
+
+    
+
+    #endif
 }
 
 int drawPixel(uint8_t x, uint8_t y, digit screen[18][48], bool enable) 

@@ -1,9 +1,23 @@
 #ifndef __SSDD_DISPLAY_H__
 #define __SSDD_DISPLAY_H__
 
+#define COMPUTER 1
+#define MICRO_CONTROLLER 0
+
+#define PLAY_MODE COMPUTER
+
+#if(PLAY_MODE == COMPUTER)
 #include <stdint.h>
 #include <stdbool.h>
 #include <ncurses.h>
+#else
+#include <LedControl.h>
+
+LedControl sevseg;
+#endif
+
+#define ON true
+#define OFF false
 
 typedef struct Digit {
     bool a ;
@@ -14,7 +28,7 @@ typedef struct Digit {
     bool f ;
     bool g ;
     bool dp ;
-} digit;
+} digit; 
 
 void initScreen();
 
