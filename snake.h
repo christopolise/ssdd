@@ -5,11 +5,11 @@
 // #include <stdlib.h>
 #include "ssdd_display.h"
 
-#define SNAKE_W_KEY_VAL 0x7001a //0x11
-#define SNAKE_Q_KEY_VAL 0x70014 // ?
-#define SNAKE_S_KEY_VAL 0x70016 //0x1F
-#define SNAKE_D_KEY_VAL 0x70007
-#define SNAKE_A_KEY_VAL 0x70004
+#define SNAKE_W_KEY_VAL 0x11 //0x11 7001a
+#define SNAKE_Q_KEY_VAL 0x10 // 0x10 70014
+#define SNAKE_S_KEY_VAL 0x1F //0x1F 70016 
+#define SNAKE_D_KEY_VAL 0x20 // 0x20 70007
+#define SNAKE_A_KEY_VAL 0x1E // 0x1E 70004
 
 typedef struct Coordinate {
     uint8_t x;

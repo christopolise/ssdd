@@ -70,7 +70,14 @@ void updateScreen(digit screen[18][48])
     refresh();
     #else
 
-    
+    for(int i = 0; i < 18; i++)
+    {
+        for(int j = 0; j < 48; j++)
+        {
+            
+        }
+    }
+
 
     #endif
 }
