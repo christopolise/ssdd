@@ -10,6 +10,14 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <ncurses.h>
+#include <unistd.h>
+#include <linux/input.h>
+#include <fcntl.h>
+#include <errno.h>
+
+static int fd, bytes;
+static struct input_event data;
+
 #else
 #include <LedControl.h>
 

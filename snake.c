@@ -163,6 +163,14 @@ int snake()
 
     while(data.value != SNAKE_Q_KEY_VAL)
     {
+        // printf("Hello\n");
+
+        // Read Keyboard Data
+        bytes = read(fd, &data, sizeof(data));
+        // if(bytes > 0)
+        // {
+        //     printf("Keypress value=%x, type=%x, code=%x\n", data.value, data.type, data.code);
+        // }
 
         // Draw snake
         for(int i = 0; i < score; i++)
@@ -172,6 +180,7 @@ int snake()
 
         if(data.value == SNAKE_W_KEY_VAL)
         {
+            printf("W");
             snakeUp = true;
             snakeDown = false;
             snakeLeft = false;
@@ -179,6 +188,7 @@ int snake()
         }
         else if(data.value == SNAKE_S_KEY_VAL)
         {
+            printf("S");
             snakeUp = false;
             snakeDown = true;
             snakeLeft = false;
@@ -186,6 +196,7 @@ int snake()
         }
         else if(data.value == SNAKE_D_KEY_VAL)
         {
+            printf("D");
             snakeUp = false;
             snakeDown = false;
             snakeLeft = false;
@@ -193,6 +204,7 @@ int snake()
         }
         else if(data.value == SNAKE_A_KEY_VAL)
         {
+            printf("A");
             snakeUp = false;
             snakeDown = false;
             snakeLeft = true;
@@ -201,6 +213,8 @@ int snake()
         drawSnake();
         updateScreen(banana);
     }
+
+    close(fd);
 
     return endwin();
 }

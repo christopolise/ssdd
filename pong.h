@@ -1,12 +1,8 @@
 #ifndef __PONG_H__
 #define __PONG_H__
 
-#include <stdint.h>
-#include <unistd.h>
-#include <linux/input.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <stdlib.h>
+// #include <stdint.h>
+// #include <stdlib.h>
 
 #include "ssdd_display.h"
 
@@ -38,9 +34,6 @@ static digit banana[18][48];
 
 static uint8_t paddle[6] = {15, 16, 17, 18, 19, 20};
 static uint8_t compPaddle[6] = {16, 17, 18, 19, 20, 21};
-
-static int fd, bytes;
-struct input_event data;
 
 static uint8_t counter = 0;
 static uint8_t paddleCounter = 0;

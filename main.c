@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "pong.h"
-#include "snake.h"
+// #include "snake.h"
 
 int main(int argc, char * argv[])
 {
     
-    initPongScreen();
-    pong();
+    // initPongScreen();
+    // pong();
 
-    // initSnakeScreen();
-    // snake();
+    initSnakeScreen();
+    snake();
 
     printf("BANANA\n");
 
